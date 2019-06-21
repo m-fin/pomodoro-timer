@@ -30,26 +30,26 @@ def newInput():
         except:
             inputTime = 25
 
-        countdown(inputTime, True)
+        countdown(inputTime, "Work")
     elif (strInput == "b"):
         try:
             inputTime = float(input("Set break timer for 'x' minutes (or press enter to set to 5 minutes): "))
         except:
             inputTime = 5
 
-        countdown(inputTime, False)
+        countdown(inputTime, "Break")
     elif (strInput == "exit" or strInput == "e"):
         os.system("clear")
         exit()
     else:
         newInput()
 
-def countdown(inputTime, blnWork):
+def countdown(inputTime, strStatus):
     t = inputTime * 60
 
     while (t > 0):
         os.system("clear")
-        print("Work time:")
+        print(strStatus + " time:")
 
         minutes = str(int(t / 60)).zfill(2)
         seconds = str(int(t % 60)).zfill(2)
@@ -67,7 +67,7 @@ def finished():
     s = pygame.mixer.Sound("alarm.wav")
     s.play(-1)
 
-    input("Press enter to stop alarm.")
+    input("Press 'Enter' to stop alarm.")
 
     s.stop()
     os.system("clear")
