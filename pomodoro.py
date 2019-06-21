@@ -45,8 +45,10 @@ def newInput():
         newInput()
 
 def countdown(inputTime, strStatus):
+    # convert inputted time in minutes to total seconds
     t = inputTime * 60
 
+    # print time remaining as string formatted to mm:ss
     while (t > 0):
         os.system("clear")
         print(strStatus + " time:")
@@ -62,16 +64,20 @@ def countdown(inputTime, strStatus):
 
 def finished():
     print("Timer done.")
-
+    
+    # initialize pygame
     pygame.init()
+    
+    # initialize pygame mixer to alarm.wav
     s = pygame.mixer.Sound("alarm.wav")
+    
+    # play audio on loop until input
     s.play(-1)
-
     input("Press 'Enter' to stop alarm.")
-
     s.stop()
-    os.system("clear")
 
+    # new input
+    os.system("clear")
     newInput()
 
 welcome()
