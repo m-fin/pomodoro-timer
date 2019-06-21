@@ -17,12 +17,12 @@ https://youtu.be/VFW3Ld7JO0w
 ### Setup
 
 ```bash
-    git https://github.com/m-fin/pomodoro-timer.git
-    cd pomodoro-timer
-    pip install -r requirements.txt
+git https://github.com/m-fin/pomodoro-timer.git
+cd pomodoro-timer
+pip install -r requirements.txt
 ```
 
 ### Run
 ```bash
-	python3 pomodoro.py
+python3 pomodoro.py
 ```	
