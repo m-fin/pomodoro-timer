@@ -2,6 +2,9 @@ import time
 import os
 import pygame
 
+# use to make arguments
+from sys import argv
+
 def welcome():
     os.system("clear")
     print("""
@@ -21,8 +24,7 @@ https://youtu.be/VFW3Ld7JO0w
     newInput()
 
 def newInput():
-    strInput = input("Type 'w' to set work timer, 'b' to set break timer, or 'exit' to exit: ")
-    strInput = strInput.lower()
+    strInput = input("Type 'w' to set work timer, 'b' to set break timer, or 'exit' to exit: ").lower()
 
     if (strInput == "w"):
         try:
@@ -56,7 +58,7 @@ def countdown(inputTime, strStatus):
         minutes = str(int(t / 60)).zfill(2)
         seconds = str(int(t % 60)).zfill(2)
         
-        print(minutes + ":"+ seconds)
+        print(minutes + ":" + seconds)
         time.sleep(1)
         t -= 1
     
