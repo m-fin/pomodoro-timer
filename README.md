@@ -26,3 +26,6 @@ pip install -r requirements.txt
 ```bash
 python3 pomodoro.py
 ```	
+
+### In Action
+![In Action](https://github.com/m-fin/pomodoro-timer/blob/master/pic.png)
