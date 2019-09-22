@@ -1,4 +1,4 @@
-# pomodoro-timer
+# pomodoro.py
 The Pomodoro Technique is as follows:
 
 1. Decide on the task to be done.
